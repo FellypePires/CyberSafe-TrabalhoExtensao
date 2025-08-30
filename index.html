@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe - Riscos de Cybersegurança</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">CyberSafe</a>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#risks">Riscos</a></li>
+                <li><a href="#kanban">Kanban</a></li>
+                <li><a href="#problem-form">Problema</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="content">
+            <h1>Entenda os Riscos de Cybersegurança 🛡️</h1>
+            <p>Explore os principais riscos que podem comprometer sua segurança digital.</p>
+            <a href="#risks" class="btn-primary">Explorar Riscos</a>
+        </div>
+    </section>
+
+    <!-- Riscos Section -->
+    <section id="risks">
+        <h2 class="section-title">Principais Riscos de Cybersegurança</h2>
+        <div class="risks-list">
+            <div class="risk-card">
+                <h3>Phishing</h3>
+                <p>Enganações por email que visam roubar dados pessoais e financeiros.</p>
+                <button class="btn-secondary" onclick="toggleDetails('phishing')">Saiba Mais</button>
+                <div id="phishing-details" class="details-content">
+                    <p>Phishing é um tipo de ataque onde os criminosos tentam enganar a vítima, se passando por uma entidade confiável (como um banco ou empresa de tecnologia). O objetivo é obter dados sensíveis, como senhas ou números de cartão de crédito.</p>
+                </div>
+            </div>
+            <div class="risk-card">
+                <h3>Ransomware</h3>
+                <p>Malware que sequestra dados e exige resgate para liberá-los.</p>
+                <button class="btn-secondary" onclick="toggleDetails('ransomware')">Saiba Mais</button>
+                <div id="ransomware-details" class="details-content">
+                    <p>Ransomware é um tipo de malware que criptografa os dados do sistema e exige um pagamento (resgate) para liberá-los. Normalmente, são ataques direcionados a grandes empresas ou indivíduos com dados valiosos.</p>
+                </div>
+            </div>
+            <div class="risk-card">
+                <h3>Ataques DDoS</h3>
+                <p>Sobrecarrega servidores com tráfego excessivo, tornando-os inacessíveis.</p>
+                <button class="btn-secondary" onclick="toggleDetails('ddos')">Saiba Mais</button>
+                <div id="ddos-details" class="details-content">
+                    <p>Os ataques de DDoS (Distributed Denial of Service) consistem em sobrecarregar um servidor com tráfego excessivo, fazendo com que o site ou serviço se torne inacessível. Esses ataques podem ser realizados com o uso de redes de computadores comprometidos.</p>
+                </div>
+            </div>
+            <div class="risk-card">
+                <h3>Invasões de Redes</h3>
+                <p>Invasões não autorizadas em redes corporativas para roubo de dados.</p>
+                <button class="btn-secondary" onclick="toggleDetails('network-invasion')">Saiba Mais</button>
+                <div id="network-invasion-details" class="details-content">
+                    <p>Invasões de redes envolvem o acesso não autorizado a sistemas e redes corporativas, geralmente para roubo de dados confidenciais. Esses ataques podem ser realizados por hackers internos ou externos, e muitas vezes são difíceis de detectar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kanban Section -->
+    <section id="kanban">
+        <h2 class="section-title">Kanban - Riscos em Andamento</h2>
+        <div class="kanban-board" id="kanban-board">
+            <div class="kanban-column" id="todo">
+                <h3>To Do</h3>
+                <div class="kanban-card" draggable="true">Phishing</div>
+                <div class="kanban-card" draggable="true">Ransomware</div>
+            </div>
+            <div class="kanban-column" id="in-progress">
+                <h3>In Progress</h3>
+                <div class="kanban-card" draggable="true">Ataques DDoS</div>
+            </div>
+            <div class="kanban-column" id="done">
+                <h3>Done</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Form Section -->
+    <section id="problem-form">
+        <h2 class="section-title">Relatar Problema</h2>
+        <div class="form-container">
+            <form id="problem-form">
+                <label for="user-name">Seu Nome:</label>
+                <input type="text" id="user-name" placeholder="Digite seu nome (opcional)">
+
+                <label for="problem-description">Descreva o Problema:</label>
+                <textarea id="problem-description" placeholder=></textarea>
+
+                <button type="submit" class="btn-primary">Enviar Problema</button>
+            </form>
+            <div id="response-output" class="response"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CyberSafe - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
